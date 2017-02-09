@@ -14,7 +14,7 @@ setlocal enableextensions enabledelayedexpansion
 
 		if %errorlevel% neq 0 exit /b 3
 
-		call configure.bat --disable-all --with-mp=auto --enable-cli --!ZTS_STATE!-zts --with-svn --with-config-file-scan-dir=%APPVEYOR_BUILD_FOLDER%\build\modules.d --with-prefix=%APPVEYOR_BUILD_FOLDER%\build --with-php-build=deps
+		call configure.bat --disable-all --with-mp=auto --enable-cli --!ZTS_STATE!-zts --with-svn=C:\projects\svn-1.8.17 --with-config-file-scan-dir=%APPVEYOR_BUILD_FOLDER%\build\modules.d --with-prefix=%APPVEYOR_BUILD_FOLDER%\build --with-php-build=deps
 
 		if %errorlevel% neq 0 exit /b 3
 
