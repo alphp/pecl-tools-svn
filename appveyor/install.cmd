@@ -2,6 +2,8 @@
 setlocal enableextensions enabledelayedexpansion
 	cinst wget
 	mkdir C:\projects\pecl-tools-svn\build
+		echo git clone -q --branch %SDK_BRANCH% %SDK_REMOTE% "%SDK_CACHE%"
+		git clone -q --depth=1 --branch %SDK_BRANCH% %SDK_REMOTE% "%SDK_CACHE%"
 	if not exist "%SDK_CACHE%" (
 		echo Cloning remote SDK repository
 		echo git clone -q --branch %SDK_BRANCH% %SDK_REMOTE% "%SDK_CACHE%"
