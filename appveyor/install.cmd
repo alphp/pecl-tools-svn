@@ -15,7 +15,9 @@ setlocal enableextensions enabledelayedexpansion
 	)
 
 	wget -N --progress=bar:force:noscroll https://sourceforge.net/projects/win32svn/files/1.8.17/apache24/svn-win32-1.8.17-ap24_dev.zip/download -O %CACHE_ROOT%\svn-win32-1.8.17-ap24_dev.zip
+	wget -N --progress=bar:force:noscroll https://sourceforge.net/projects/win32svn/files/1.8.17/apache24/svn-win32-1.8.17-ap24.zip/download -O %CACHE_ROOT%\svn-win32-1.8.17-ap24_dev.zip
 	7z x -y %CACHE_ROOT%\svn-win32-1.8.17-ap24_dev.zip -oC:\projects\
+	7z x -y %CACHE_ROOT%\svn-win32-1.8.17-ap24.zip -oC:\projects\
 
 	echo git clone -q --depth=1 --branch=PHP-%PHP_REL% https://github.com/php/php-src C:\projects\php-src
 	git clone -q --depth=1 --branch=PHP-%PHP_REL% https://github.com/php/php-src C:\projects\php-src
